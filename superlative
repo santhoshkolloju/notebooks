@@ -1,0 +1,138 @@
+Section 1: Trigger Identification
+Objective: Scan the entire marketing material PDF (text, images, tables, charts, and visual elements) to identify sentences or claims containing superlatives, absolute statements, or industry-specific terms that may indicate potential NAIC rule violations.
+Instructions:
+* Identify Superlatives and Absolute Statements:
+    * Look for superlatives such as "best," "top," "greatest," "most," "unsurpassed," etc.
+    * Look for absolute statements such as "guaranteed," "always," "never," "completely," "totally," etc.
+* Identify Industry-Specific Terms (for Life Insurance and Annuity Materials):
+    * Flag terms including: "guaranteed coverage," "guaranteed acceptance," "guaranteed lifetime coverage," "no medical exam required," "guaranteed fixed premiums," "tax-free benefits," "immediate payout," "guaranteed annuity certain," "guaranteed death benefit," and "assured cash value."
+* Examples of Flagged Claims:
+    * "We offer the best rates in the industry."
+    * "Our policies guarantee the highest returns."
+    * "You will always get the most competitive premiums with us."
+    * "Our service is unsurpassed in the market."
+    * "We never charge hidden fees."
+    * "Guaranteed coverage for all applicants."
+    * "Guaranteed lifetime coverage with no exceptions."
+    * "No medical exam required for our policies."
+    * "Guaranteed death benefit for your loved ones."
+    * (From a chart) "Assured cash value growth."
+* Outcome:
+    * If no superlative, absolute, or industry-specific claims are found, the process stops, and the result is NOT_APPLICABLE.
+    * If claims are flagged, proceed to Trigger Verification.
+
+Section 2: Trigger Verification
+Objective: Verify flagged claims to determine if they are compliant with NAIC rules by performing a series of checks: False Positive Check, Substantiation Check, and Misleading Context Check. Each check builds on the previous one, and the process stops when a claim is deemed compliant or non-compliant.
+
+Step 1: False Positive Check
+Objective: Determine if a flagged claim is a false positive, meaning it does not relate directly to the product, service, or company claims about performance or benefits, or if it uses industry-specific terms accurately.
+Instructions:
+* Evaluate the Claim:
+    * Check if the flagged sentence or claim falls into one of the following categories (based solely on the marketing material content):
+        * Testimonials: Customer quotes or endorsements (e.g., "John says we’re the best!").
+        * General Non-Product-Related Statements: Metaphors or unrelated statements (e.g., "Life is the greatest gift.").
+        * General Slogans: Broad promotional phrases (e.g., "Always looking out for you!").
+        * Mission or Vision Statements: Company values or goals (e.g., "We always strive to protect your future.").
+        * Marketing Taglines or Catchphrases: Repeated branding phrases (e.g., "The best choice for peace of mind!").
+        * Hypothetical or Aspirational Statements: Conditional or idealistic claims (e.g., "You could have the greatest security.").
+        * General Encouragements or Motivational Statements: Calls to action or optimistic phrases (e.g., "Never settle for less!").
+        * Descriptive Adjectives for Non-Product Aspects: Superlatives about company attributes (e.g., "Our team is the most experienced.").
+        * Historical or Factual Statements: Objective company facts (e.g., "The oldest insurer in the state.").
+        * Customer-Facing Invitations or Promises of Engagement: Offers of support (e.g., "We’re always here to help!").
+        * Rhetorical or Exaggerated Marketing Flair: Stylistic hyperbole (e.g., "The absolute best way to secure your future!").
+        * Legal or Regulatory Disclosures: Required statements (e.g., "Your policy is always protected under state insurance laws.").
+        * Educational or Informational Statements: General knowledge about insurance (e.g., "Life insurance is the most important decision you’ll make.").
+        * Comparative Statements About General Benefits: Claims about the product category (e.g., "Annuities offer the best way to plan for retirement.").
+        * Statements About Consumer Actions or Choices: Focus on consumer agency (e.g., "You can always choose the best plan for your family.").
+        * Promotional Event or Offer Descriptions: Limited-time promotions (e.g., "Get the best deal this month only!").
+* Industry-Specific Terms:
+    * For Life Insurance and Annuity materials, verify if industry-specific terms (e.g., "guaranteed coverage," "no medical exam required") are used accurately and align with policy terms provided in the document (e.g., footnotes, policy details, or referenced materials).
+    * If these terms are supported and do not exaggerate or misrepresent the offering, they are false positives.
+* Examples:
+    * False Positive: "Our customers say we are the best!" (Testimonial.)
+    * False Positive: "Life is the greatest gift!" (Non-product-related metaphor.)
+    * False Positive: "Always looking out for you!" (Slogan.)
+    * False Positive: "Guaranteed coverage is available for ages 50-75, as outlined in our policy terms." (Accurate industry-specific term.)
+    * Not a False Positive: "We are the best insurance provider in the state." (Direct company claim.)
+    * Not a False Positive: "Guaranteed lifetime coverage with no exceptions." (Absolute claim needing review.)
+* Outcome:
+    * If the claim is a false positive, mark it as COMPLIANT in the tracking table and stop verification for that claim.
+    * If the claim is not a false positive, proceed to Step 2: Substantiation Check.
+
+Step 2: Substantiation Check
+Objective: Verify if the flagged superlative, absolute statement, or industry-specific term is substantiated with evidence or a clear basis for comparison within the marketing material.
+Instructions:
+* Evaluate Substantiation:
+    * Check the entire document (footnotes, appendices, referenced reports, etc.) for supporting evidence.
+    * For superlatives (e.g., "best," "top"), confirm if there is comparative evidence, such as:
+        * Data (e.g., rate comparisons showing lower premiums).
+        * Industry rankings (e.g., J.D. Power awards).
+        * Third-party certifications (e.g., consumer reports).
+        * Comparisons must be fair, include major competitors, and use clear, measurable standards.
+    * For absolute statements (e.g., "guaranteed," "always," "never") and industry-specific terms (e.g., "guaranteed coverage," "no medical exam required"), verify that the claim is factually accurate and supported by:
+        * Policy details, contract terms, or other documented evidence.
+        * Clear disclosure of any conditions or limitations (e.g., age restrictions, premium payment requirements).
+* Examples:
+    * Substantiated: "Our rates are the best, as confirmed by the 2023 Industry Rate Comparison Report showing 15% lower premiums than the industry average."
+    * Substantiated: "Guaranteed coverage for applicants aged 50-75, as detailed in our policy terms."
+    * Substantiated: "No medical exam required for our term life policy, as outlined in the policy brochure."
+    * Not Substantiated: "We offer the best rates." (No evidence provided.)
+    * Not Substantiated: "Guaranteed lifetime coverage with no exceptions." (Lacks supporting details.)
+* Outcome:
+    * If the claim is substantiated, mark it as COMPLIANT in the tracking table and stop verification for that claim.
+    * If the claim is not substantiated, proceed to Step 3: Misleading Context Check.
+
+Step 3: Misleading Context Check
+Objective: Assess if the flagged claim, even if partially substantiated, could mislead the average consumer based on its presentation and context within the marketing material.
+Instructions:
+* Evaluation Steps:
+    * Identify the specific claim (e.g., "Guaranteed lifetime coverage") and note its wording and presentation (e.g., bold text, prominent placement).
+    * Review surrounding text, disclaimers, footnotes, appendices, or visual elements (e.g., charts, graphs) for explanations, conditions, or limitations.
+    * Assess how an average consumer with no specialized knowledge would interpret the claim. Would they expect benefits or outcomes the product may not deliver?
+    * Check if conditions or exceptions (e.g., age restrictions) are clearly disclosed and easily noticeable (not buried in small print or unclear language).
+    * Verify that supporting elements (e.g., charts, examples) are clear, relevant, and tied to the claim without creating a false impression.
+    * Evaluate the overall impression of the claim. Does it exaggerate benefits, hide risks, or imply broader coverage than provided?
+* Industry-Specific Terms:
+    * Ensure terms like "guaranteed coverage" or "no medical exam required" do not imply broader coverage or benefits than actually provided.
+* Consumer Perspective:
+    * Consider whether the claim could create unrealistic expectations or misrepresent the product in a way that affects consumer decisions.
+* Examples:
+    * Misleading: "Guaranteed lifetime coverage with no exceptions." (Implies unconditional coverage without clear limitations.)
+    * Misleading: "No medical exam required." (Lacks context about other underwriting requirements.)
+    * Not Misleading: "Guaranteed coverage for eligible applicants aged 50-75, as per policy terms." (Clear and specific.)
+    * Not Misleading: "No medical exam required for our term life policy, subject to policy conditions." (Includes qualifiers.)
+* Outcome:
+    * If the claim is clear, consistent with the document’s details, and unlikely to create false expectations, mark it as COMPLIANT 
+    * If the claim could confuse or deceive the average consumer by exaggerating or obscuring key details, mark it as NON_COMPLIANT 
+
+OUTPUTFORMAT:
+{{
+  "results": [
+    {{
+      "claim": "Text of the flagged claim",
+      "triggered": "Yes/No",
+      "false_positive_check": {{
+        "is_false_positive": "Yes/No",
+        "category": "Testimonial/General Slogan/Mission Statement/etc. or None",
+        "reason": "Explanation of why it is/isn’t a false positive based on document context"
+      }},
+      "substantiation_check": {{
+        "is_substantiated": "Yes/No/Partial/Not Applicable",
+        "evidence_found": "Description of evidence (e.g., policy terms, chart) or 'None' if not applicable",
+        "reason": "Explanation of substantiation result"
+      }},
+      "misleading_context_check": {{
+        "is_misleading": "Yes/No/Not Applicable",
+        "consumer_impression": "How an average consumer might interpret the claim",
+        "context_issues": "Issues with presentation, disclaimers, or clarity, or 'None' if not applicable",
+        "reason": "Explanation of misleading result"
+      }},
+      "final_status": "COMPLIANT/NON_COMPLIANT",
+      "overall_reason": "Summary of why the claim is COMPLIANT or NON_COMPLIANT"
+    }}
+    // Additional objects for each flagged claim
+  ]
+}}
+
+MARKETING MATERIAL TEXT:
+{marketing_material}
