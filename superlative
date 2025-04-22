@@ -1,8 +1,8 @@
 {
   "task": "Analyze marketing material PDF for compliance with NAIC rules",
   "instructions": {
-    "section_1_trigger_identification": {
-      "objective": "Scan the entire marketing material PDF (text, images, tables, charts, and visual elements) to identify sentences or claims containing superlatives, absolute statements, or industry-specific terms that may indicate potential NAIC rule violations.",
+    "phase_1_trigger_identification": {
+      "objective": "Scan the entire marketing material PDF (text, images, tables, charts, and visual elements) to identify all sentences or claims containing superlatives, absolute statements, or industry-specific terms that may indicate potential NAIC rule violations, and output them as a list.",
       "steps": [
         {
           "action": "Identify claims with superlatives, absolute statements, or industry-specific terms.",
@@ -36,22 +36,23 @@
           ]
         },
         {
-          "action": "Determine next steps based on findings.",
+          "action": "Compile a list of flagged claims as potential violations.",
           "outcome": {
             "if_no_claims_found": {
-              "result": "NOT_APPLICABLE",
-              "next_step": "stop"
+              "stepResult": "NOT_APPLICABLE",
+              "action": "stop"
             },
             "if_claims_flagged": {
-              "result": "Proceed to Trigger Verification",
-              "next_step": "section_2_trigger_verification"
+              "stepResult": "POTENTIAL_VIOLATIONS_FOUND",
+              "action": "continue",
+              "next_step": "phase_2_trigger_verification"
             }
           }
         }
       ]
     },
-    "section_2_trigger_verification": {
-      "objective": "Verify flagged claims to determine NAIC rule compliance through False Positive Check, Substantiation Check, and Misleading Context Check, stopping when a claim is deemed compliant or non-compliant.",
+    "phase_2_trigger_verification": {
+      "objective": "Evaluate each flagged claim to determine NAIC rule compliance through False Positive Check, Substantiation Check, and Misleading Context Check, stopping when a definitive result is reached for a claim.",
       "steps": [
         {
           "step": "1",
@@ -176,11 +177,12 @@
           },
           "outcome": {
             "if_false_positive": {
-              "result": "COMPLIANT",
-              "next_step": "stop"
+              "stepResult": "COMPLIANT",
+              "action": "stop"
             },
             "if_not_false_positive": {
-              "result": "Proceed to Substantiation Check",
+              "stepResult": "NOT_FALSE_POSITIVE",
+              "action": "continue",
               "next_step": "step_2"
             }
           }
@@ -236,11 +238,12 @@
           },
           "outcome": {
             "if_substantiated": {
-              "result": "COMPLIANT",
-              "next_step": "stop"
+              "stepResult": "COMPLIANT",
+              "action": "stop"
             },
             "if_not_substantiated": {
-              "result": "Proceed to Misleading Context Check",
+              "stepResult": "NOT_SUBSTANTIATED",
+              "action": "continue",
               "next_step": "step_3"
             }
           }
@@ -293,15 +296,72 @@
           },
           "outcome": {
             "if_not_misleading": {
-              "result": "COMPLIANT",
-              "next_step": "stop"
+              "stepResult": "COMPLIANT",
+              "action": "stop"
             },
             "if_misleading": {
-              "result": "NON_COMPLIANT",
-              "next_step": "stop"
+              "stepResult": "NON_COMPLIANT",
+              "action": "stop"
             }
           }
         }
       ]
     }
-  }
+  },
+  "output_format": {
+    "description": "Return the results in a structured JSON format, first listing all potential violations, then providing verification results for each flagged claim, including stepResult and action for each step, stopping when a definitive result is reached.",
+    "structure": {
+      "phase_1_results": {
+        "potential_violations": [
+          "Text of flagged claim 1",
+          "Text of flagged claim 2"
+        ],
+        "stepResult": "NOT_APPLICABLE/POTENTIAL_VIOLATIONS_FOUND",
+        "action": "stop/continue",
+        "reason": "Explanation of why no claims were found or why claims were flagged"
+      },
+      "phase_2_results": [
+        {
+          "claim": "Text of the flagged claim",
+          "triggered": "Yes",
+          "steps": [
+            {
+              "step_name": "False Positive Check",
+              "stepResult": "COMPLIANT/NOT_FALSE_POSITIVE/Not Applicable",
+              "action": "stop/continue/Not Applicable",
+              "details": {
+                "is_false_positive": "Yes/No/Not Applicable",
+                "category": "Testimonial/General Slogan/Mission Statement/etc. or None",
+                "reason": "Explanation of why it is/isn’t a false positive based on document context"
+              }
+            },
+            {
+              "step_name": "Substantiation Check",
+              "stepResult": "COMPLIANT/NOT_SUBSTANTIATED/Not Applicable",
+              "action": "stop/continue/Not Applicable",
+              "details": {
+                "is_substantiated": "Yes/No/Partial/Not Applicable",
+                "evidence_found": "Description of evidence (e.g., policy terms, chart) or 'None' if not applicable",
+                "reason": "Explanation of substantiation result"
+              }
+            },
+            {
+              "step_name": "Misleading Context Check",
+              "stepResult": "COMPLIANT/NON_COMPLIANT/Not Applicable",
+              "action": "stop/Not Applicable",
+              "details": {
+                "is_misleading": "Yes/No/Not Applicable",
+                "consumer_impression": "How an average consumer might interpret the claim",
+                "context_issues": "Issues with presentation, disclaimers, or clarity, or 'None' if not applicable",
+                "reason": "Explanation of misleading result"
+              }
+            }
+          ],
+          "final_status": "COMPLIANT/NON_COMPLIANT",
+          "overall_reason": "Summary of why the claim is COMPLIANT or NON_COMPLIANT"
+        }
+      ]
+    }
+  },
+  "marketing_material": "{marketing_material}"
+}
