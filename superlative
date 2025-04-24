@@ -1,8 +1,8 @@
 {
-  "task": "Analyze marketing material PDF for compliance with NAIC rules",
+  "task": "Analyze marketing material PDF for compliance with NAIC rules using extracted textual content",
   "instructions": {
-    "phase_1_trigger_identification": {
-      "objective": "Scan the entire marketing material PDF (text, images, tables, charts, and visual elements) to identify all sentences or claims containing superlatives, absolute statements, or industry-specific terms that may indicate potential NAIC rule violations, and output them as a list.",
+    "section_1_trigger_identification": {
+      "objective": "Scan the extracted text to identify claims containing superlatives, absolute statements, or industry-specific terms that may indicate potential NAIC rule violations.",
       "steps": [
         {
           "action": "Identify claims with superlatives, absolute statements, or industry-specific terms.",
@@ -14,302 +14,203 @@
               "guaranteed acceptance",
               "guaranteed lifetime coverage",
               "no medical exam required",
+              "no health questions",
               "guaranteed fixed premiums",
               "tax-free benefits",
               "immediate payout",
               "guaranteed annuity certain",
               "guaranteed death benefit",
               "assured cash value"
-            ]
+            ],
+            "note": "Flag industry-specific terms only if they lack context (e.g., age restrictions, graded benefits, premium requirements) or imply broader benefits than provided."
           },
-          "examples": [
+          "compliant_examples": [
+            "Guaranteed acceptance for ages 50-85, no health questions required, as per policy terms.",
+            "No medical exam required for our simplified issue policy, subject to policy conditions.",
+            "Guaranteed death benefit of $10,000 after a 2-year period, as detailed in our policy terms."
+          ],
+          "non_compliant_examples": [
             "We offer the best rates in the industry.",
-            "Our policies guarantee the highest returns.",
-            "You will always get the most competitive premiums with us.",
-            "Our service is unsurpassed in the market.",
-            "We never charge hidden fees.",
-            "Guaranteed coverage for all applicants.",
-            "Guaranteed lifetime coverage with no exceptions.",
-            "No medical exam required for our policies.",
-            "Guaranteed death benefit for your loved ones.",
-            "Assured cash value growth."
+            "Guaranteed acceptance for everyone with no health questions.",
+            "Guaranteed death benefit, instant protection for all!"
           ]
         },
         {
-          "action": "Compile a list of flagged claims as potential violations.",
+          "action": "Determine next steps based on findings.",
           "outcome": {
             "if_no_claims_found": {
-              "stepResult": "NOT_APPLICABLE",
-              "action": "stop"
+              "result": "NOT_APPLICABLE",
+              "next_step": "stop"
             },
             "if_claims_flagged": {
-              "stepResult": "POTENTIAL_VIOLATIONS_FOUND",
-              "action": "continue",
-              "next_step": "phase_2_trigger_verification"
+              "result": "Proceed to Trigger Verification",
+              "next_step": "section_2_trigger_verification"
             }
           }
         }
       ]
     },
-    "phase_2_trigger_verification": {
-      "objective": "Evaluate each flagged claim to determine NAIC rule compliance through False Positive Check, Substantiation Check, and Misleading Context Check, stopping when a definitive result is reached for a claim.",
+    "section_2_trigger_verification": {
+      "objective": "Verify flagged claims to determine NAIC rule compliance using textual content through a hierarchical series of checks tailored to claim type.",
       "steps": [
         {
           "step": "1",
-          "name": "False Positive Check",
-          "objective": "Determine if a flagged claim is a false positive, unrelated to product/service performance or benefits, or accurately uses industry-specific terms.",
+          "name": "Preliminary Filtering (False Positive Check)",
+          "objective": "Determine if the flagged claim is a false positive, unrelated to product performance or benefits, or an accurate industry-specific term with proper context.",
           "instructions": {
             "evaluate_claim": {
-              "categories": [
-                {
-                  "name": "Testimonials",
-                  "description": "Customer quotes or endorsements",
-                  "example": "John says we’re the best!"
-                },
-                {
-                  "name": "General Non-Product Statements",
-                  "description": "Metaphors or unrelated statements",
-                  "example": "Life is the greatest gift."
-                },
-                {
-                  "name": "General Slogans",
-                  "description": "Broad promotional phrases",
-                  "example": "Always looking out for you!"
-                },
-                {
-                  "name": "Mission or Vision Statements",
-                  "description": "Company values or goals",
-                  "example": "We always strive to protect your future."
-                },
-                {
-                  "name": "Marketing Taglines",
-                  "description": "Repeated branding phrases",
-                  "example": "The best choice for peace of mind!"
-                },
-                {
-                  "name": "Hypothetical Statements",
-                  "description": "Conditional or idealistic claims",
-                  "example": "You could have the greatest security."
-                },
-                {
-                  "name": "Motivational Statements",
-                  "description": "Calls to action or optimistic phrases",
-                  "example": "Never settle for less!"
-                },
-                {
-                  "name": "Descriptive Adjectives",
-                  "description": "Superlatives about non-product aspects",
-                  "example": "Our team is the most experienced."
-                },
-                {
-                  "name": "Historical Facts",
-                  "description": "Objective company facts",
-                  "example": "The oldest insurer in the state."
-                },
-                {
-                  "name": "Customer Invitations",
-                  "description": "Offers of support",
-                  "example": "We’re always here to help!"
-                },
-                {
-                  "name": "Rhetorical Flair",
-                  "description": "Stylistic hyperbole",
-                  "example": "The absolute best way to secure your future!"
-                },
-                {
-                  "name": "Legal Disclosures",
-                  "description": "Required statements",
-                  "example": "Your policy is always protected under state insurance laws."
-                },
-                {
-                  "name": "Educational Statements",
-                  "description": "General knowledge about insurance",
-                  "example": "Life insurance is the most important decision you’ll make."
-                },
-                {
-                  "name": "General Benefit Statements",
-                  "description": "Claims about the product category",
-                  "example": "Annuities offer the best way to plan for retirement."
-                },
-                {
-                  "name": "Consumer Action Statements",
-                  "description": "Focus on consumer agency",
-                  "example": "You can always choose the best plan for your family."
-                },
-                {
-                  "name": "Promotional Offers",
-                  "description": "Limited-time promotions",
-                  "example": "Get the best deal this month only!"
-                }
+              "false_positive_categories": [
+                "Testimonials (e.g., 'John says we’re the best!')",
+                "General Non-Product Statements (e.g., 'Life is the greatest gift.')",
+                "General Slogans (e.g., 'Always looking out for you!')",
+                "Mission or Vision Statements (e.g., 'We always strive to protect your future.')",
+                "Marketing Taglines (e.g., 'The best choice for peace of mind!')",
+                "Hypothetical Statements (e.g., 'You could have the greatest security.')",
+                "Motivational Statements (e.g., 'Never settle for less!')",
+                "Descriptive Adjectives about non-product aspects (e.g., 'Our team is the most experienced.')",
+                "Historical Facts (e.g., 'The oldest insurer in the state.')",
+                "Customer Invitations (e.g., 'We’re always here to help!')",
+                "Rhetorical Flair (e.g., 'The absolute best way to secure your future!')",
+                "Legal Disclosures (e.g., 'Your policy is always protected under state laws.')",
+                "Educational Statements (e.g., 'Life insurance is the most important decision.')",
+                "General Benefit Statements (e.g., 'Annuities offer the best way to plan.')",
+                "Consumer Action Statements (e.g., 'You can always choose the best plan.')",
+                "Promotional Offers (e.g., 'Get the best deal this month only!')"
               ],
               "industry_specific_terms": {
-                "description": "Verify if terms like 'guaranteed coverage' align with policy terms in the document (e.g., footnotes, policy details).",
-                "condition": "If supported and not exaggerated, mark as false positive."
+                "description": "If terms like 'guaranteed acceptance' or 'guaranteed death benefit' accurately reflect policy terms and include conditions (e.g., age restrictions, graded benefits) in the text, mark as false positive."
               }
             },
-            "examples": [
+            "compliant_examples": [
+              {
+                "claim": "Guaranteed acceptance for ages 50-85, no health questions required, as per policy terms.",
+                "is_false_positive": "Yes",
+                "category": "Accurate Industry-Specific Term",
+                "reason": "Accurately describes product with clear age limits."
+              },
               {
                 "claim": "Our customers say we are the best!",
                 "is_false_positive": "Yes",
-                "category": "Testimonial"
-              },
+                "category": "Testimonial",
+                "reason": "Customer endorsement unrelated to product performance."
+              }
+            ],
+            "non_compliant_examples": [
               {
-                "claim": "Life is the greatest gift!",
-                "is_false_positive": "Yes",
-                "category": "General Non-Product Statement"
-              },
-              {
-                "claim": "Guaranteed coverage is available for ages 50-75, as outlined in our policy terms.",
-                "is_false_positive": "Yes",
-                "category": "Accurate Industry-Specific Term"
+                "claim": "Guaranteed acceptance for everyone with no health questions.",
+                "is_false_positive": "No",
+                "category": "None",
+                "reason": "Exaggerates eligibility by omitting restrictions."
               },
               {
                 "claim": "We are the best insurance provider in the state.",
                 "is_false_positive": "No",
-                "category": "None"
-              },
-              {
-                "claim": "Guaranteed lifetime coverage with no exceptions.",
-                "is_false_positive": "No",
-                "category": "None"
+                "category": "None",
+                "reason": "Unsubstantiated superlative claim."
               }
             ]
           },
           "outcome": {
             "if_false_positive": {
-              "stepResult": "COMPLIANT",
-              "action": "stop"
+              "result": "COMPLIANT",
+              "next_step": "stop"
             },
             "if_not_false_positive": {
-              "stepResult": "NOT_FALSE_POSITIVE",
-              "action": "continue",
+              "result": "Proceed to Claim Type Classification",
               "next_step": "step_2"
             }
           }
         },
         {
           "step": "2",
-          "name": "Substantiation Check",
-          "objective": "Verify if the flagged claim is substantiated with evidence or a clear basis for comparison within the marketing material.",
+          "name": "Claim Type Classification",
+          "objective": "Classify the flagged claim as either a Superlative/Absolute Claim or an Industry-Specific Term Claim.",
           "instructions": {
-            "evaluate_substantiation": {
-              "general": "Check the entire document (footnotes, appendices, referenced reports) for supporting evidence.",
-              "superlatives": {
-                "description": "Confirm comparative evidence for terms like 'best' or 'top'.",
-                "evidence_types": [
-                  "Data (e.g., rate comparisons showing lower premiums)",
-                  "Industry rankings (e.g., J.D. Power awards)",
-                  "Third-party certifications (e.g., consumer reports)"
-                ],
-                "conditions": "Comparisons must be fair, include major competitors, and use measurable standards."
-              },
-              "absolute_and_industry_terms": {
-                "description": "Verify factual accuracy for terms like 'guaranteed' or 'no medical exam required'.",
-                "evidence_types": [
-                  "Policy details",
-                  "Contract terms",
-                  "Other documented evidence"
-                ],
-                "conditions": "Ensure clear disclosure of conditions or limitations (e.g., age restrictions, premium payments)."
-              }
-            },
-            "examples": [
-              {
-                "claim": "Our rates are the best, as confirmed by the 2023 Industry Rate Comparison Report showing 15% lower premiums than the industry average.",
-                "is_substantiated": "Yes",
-                "evidence": "2023 Industry Rate Comparison Report"
-              },
-              {
-                "claim": "Guaranteed coverage for applicants aged 50-75, as detailed in our policy terms.",
-                "is_substantiated": "Yes",
-                "evidence": "Policy terms"
-              },
-              {
-                "claim": "We offer the best rates.",
-                "is_substantiated": "No",
-                "evidence": "None"
-              },
-              {
-                "claim": "Guaranteed lifetime coverage with no exceptions.",
-                "is_substantiated": "No",
-                "evidence": "None"
-              }
-            ]
+            "classification": {
+              "superlative_absolute_claim": "Claims using superlatives or absolute statements about product performance or benefits (e.g., 'best rates,' 'always the lowest premiums').",
+              "industry_specific_term_claim": "Claims using industry-specific terms that describe product features (e.g., 'guaranteed acceptance,' 'no health questions')."
+            }
           },
           "outcome": {
-            "if_substantiated": {
-              "stepResult": "COMPLIANT",
-              "action": "stop"
-            },
-            "if_not_substantiated": {
-              "stepResult": "NOT_SUBSTANTIATED",
-              "action": "continue",
-              "next_step": "step_3"
-            }
+            "result": "Proceed to Type-Specific Verification",
+            "next_step": "step_3"
           }
         },
         {
           "step": "3",
-          "name": "Misleading Context Check",
-          "objective": "Assess if the flagged claim could mislead the average consumer based on its presentation and context within the marketing material.",
+          "name": "Type-Specific Verification",
+          "objective": "Verify the claim’s validity based on its type, ensuring substantiation or accuracy within the textual content.",
           "instructions": {
-            "evaluation_steps": [
-              "Identify the claim’s wording and presentation (e.g., bold text, prominent placement).",
-              "Review surrounding text, disclaimers, footnotes, appendices, or visual elements for explanations, conditions, or limitations.",
-              "Assess how an average consumer with no specialized knowledge would interpret the claim. Would they expect benefits the product may not deliver?",
-              "Check if conditions or exceptions (e.g., age restrictions) are clearly disclosed and noticeable (not in small print or unclear language).",
-              "Verify that supporting elements (e.g., charts, examples) are clear, relevant, and tied to the claim without creating a false impression.",
-              "Evaluate the overall impression. Does the claim exaggerate benefits, hide risks, or imply broader coverage than provided?"
+            "for_superlative_absolute_claims": {
+              "check": "Substantiation Check",
+              "description": "Verify if the claim is substantiated with evidence or a clear basis for comparison within the text.",
+              "evidence_types": [
+                "Data (e.g., rate comparisons showing lower premiums)",
+                "Industry rankings (e.g., J.D. Power awards)",
+                "Third-party certifications (e.g., consumer reports)"
+              ],
+              "conditions": "Comparisons must be fair, include major competitors, and use measurable standards."
+            },
+            "for_industry_specific_term_claims": {
+              "check": "Accuracy and Clarity Check",
+              "description": "Verify if the term accurately reflects the product’s features and if necessary conditions (e.g., age restrictions, graded benefits, premium requirements) are clearly stated in the text to avoid misleading impressions.",
+              "evidence_types": [
+                "Policy details",
+                "Contract terms",
+                "Product design documentation"
+              ],
+              "conditions": "Ensure conditions are explicitly mentioned to prevent unrealistic expectations (e.g., implying universal eligibility or immediate full benefits)."
+            },
+            "compliant_examples": [
+              {
+                "claim": "Our rates are the best, as confirmed by the 2023 Industry Rate Comparison Report showing 15% lower premiums than the industry average.",
+                "is_compliant": "Yes",
+                "evidence": "2023 Industry Rate Comparison Report",
+                "reason": "Supported by third-party data."
+              },
+              {
+                "claim": "Guaranteed acceptance for applicants aged 50-85, no health questions, as detailed in our policy terms.",
+                "is_compliant": "Yes",
+                "evidence": "Policy terms confirming no underwriting",
+                "reason": "Accurate with clear conditions."
+              }
             ],
-            "industry_specific_terms": {
-              "description": "Ensure terms like 'guaranteed coverage' do not imply broader coverage or benefits than provided."
-            },
-            "consumer_perspective": {
-              "description": "Consider if the claim creates unrealistic expectations or misrepresents the product in a way that affects consumer decisions."
-            },
-            "examples": [
+            "non_compliant_examples": [
               {
-                "claim": "Guaranteed lifetime coverage with no exceptions.",
-                "is_misleading": "Yes",
-                "consumer_impression": "Unconditional coverage",
-                "context_issues": "No conditions disclosed"
+                "claim": "We offer the best rates in the industry.",
+                "is_compliant": "No",
+                "evidence": "None",
+                "reason": "No comparative data provided."
               },
               {
-                "claim": "No medical exam required.",
-                "is_misleading": "Yes",
-                "consumer_impression": "No underwriting requirements",
-                "context_issues": "Lacks context about other requirements"
-              },
-              {
-                "claim": "Guaranteed coverage for eligible applicants aged 50-75, as per policy terms.",
-                "is_misleading": "No",
-                "consumer_impression": "Coverage for specific age group with conditions",
-                "context_issues": "None"
-              },
-              {
-                "claim": "No medical exam required for our term life policy, subject to policy conditions.",
-                "is_misleading": "No",
-                "consumer_impression": "No exam with clear conditions",
-                "context_issues": "None"
+                "claim": "Guaranteed acceptance for everyone, no health questions.",
+                "is_compliant": "No",
+                "evidence": "None",
+                "reason": "Omits age restrictions and implies universal eligibility."
               }
             ]
           },
           "outcome": {
-            "if_not_misleading": {
-              "stepResult": "COMPLIANT",
-              "action": "stop"
+            "if_compliant": {
+              "result": "COMPLIANT",
+              "next_step": "stop"
             },
-            "if_misleading": {
-              "stepResult": "NON_COMPLIANT",
-              "action": "stop"
+            "if_not_compliant": {
+              "result": "NON_COMPLIANT",
+              "next_step": "stop"
             }
           }
         }
       ]
     }
-  },
+  }
+}
+
+
+
+{
   "output_format": {
-    "description": "Return the results in a structured JSON format, first listing all potential violations, then providing verification results for each flagged claim, including stepResult and action for each step, stopping when a definitive result is reached.",
+    "description": "Return the results in a structured JSON format, listing all potential violations identified in the text, followed by verification results for each flagged claim, including stepResult and action for each step, stopping when a definitive result is reached.",
     "structure": {
       "phase_1_results": {
         "potential_violations": [
@@ -326,39 +227,39 @@
           "triggered": "Yes",
           "steps": [
             {
-              "step_name": "False Positive Check",
+              "step_name": "Preliminary Filtering (False Positive Check)",
               "stepResult": "COMPLIANT/NOT_FALSE_POSITIVE/Not Applicable",
               "action": "stop/continue/Not Applicable",
               "details": {
                 "is_false_positive": "Yes/No/Not Applicable",
-                "category": "Testimonial/General Slogan/Mission Statement/etc. or None",
-                "reason": "Explanation of why it is/isn’t a false positive based on document context"
+                "category": "Testimonial/General Non-Product Statement/General Slogan/Mission or Vision Statement/Marketing Tagline/Hypothetical Statement/Motivational Statement/Descriptive Adjective/Historical Fact/Customer Invitation/Rhetorical Flair/Legal Disclosure/Educational Statement/General Benefit Statement/Consumer Action Statement/Promotional Offer/Accurate Industry-Specific Term/None",
+                "reason": "Explanation of why the claim is or isn’t a false positive based on the text context"
               }
             },
             {
-              "step_name": "Substantiation Check",
-              "stepResult": "COMPLIANT/NOT_SUBSTANTIATED/Not Applicable",
-              "action": "stop/continue/Not Applicable",
+              "step_name": "Claim Type Classification",
+              "stepResult": "CLASSIFIED/Not Applicable",
+              "action": "continue/Not Applicable",
               "details": {
-                "is_substantiated": "Yes/No/Partial/Not Applicable",
-                "evidence_found": "Description of evidence (e.g., policy terms, chart) or 'None' if not applicable",
-                "reason": "Explanation of substantiation result"
+                "claim_type": "Superlative or Absolute Claim/Industry-Specific Term Claim/Not Applicable",
+                "reason": "Explanation of how the claim was classified"
               }
             },
             {
-              "step_name": "Misleading Context Check",
+              "step_name": "Type-Specific Verification",
               "stepResult": "COMPLIANT/NON_COMPLIANT/Not Applicable",
               "action": "stop/Not Applicable",
               "details": {
-                "is_misleading": "Yes/No/Not Applicable",
-                "consumer_impression": "How an average consumer might interpret the claim",
-                "context_issues": "Issues with presentation, disclaimers, or clarity, or 'None' if not applicable",
-                "reason": "Explanation of misleading result"
+                "check_performed": "Substantiation Check/Accuracy and Clarity Check/Not Applicable",
+                "is_compliant": "Yes/No/Not Applicable",
+                "evidence_found": "Description of evidence (e.g., policy terms, rate comparison report) or 'None' if not applicable",
+                "conditions_present": "List of conditions mentioned (e.g., age restrictions, graded benefits) or 'None' if not applicable",
+                "reason": "Explanation of why the claim is compliant or non-compliant based on substantiation or accuracy"
               }
             }
           ],
           "final_status": "COMPLIANT/NON_COMPLIANT",
-          "overall_reason": "Summary of why the claim is COMPLIANT or NON_COMPLIANT"
+          "overall_reason": "Summary of why the claim is COMPLIANT or NON_COMPLIANT based on the verification process"
         }
       ]
     }
