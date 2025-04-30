@@ -952,3 +952,46 @@
     }
   ]
 }
+
+YOUR objective is to create a diverse collection of sentences to train a classification model that can distinguish between "BALANCED" and "NON_COMPLIANT" content according to FINRA 2210 standards.
+Ensure diversity by avoiding repetitive starting patterns or "our", "THIS...", etc., templated phrases. For example, avoid starting all sentences with "Our".
+
+Category: Branding and Mission Statements
+{
+    "subcategory": "Slogans or Taglines",
+    "risk_levels": {
+      "high_risk": "Slogans implying guaranteed outcomes (e.g., 'Invest with us and never lose money')",
+      "medium_risk": "Taglines that are overly vague or aspirational (e.g., 'The best choice for investors')",
+      "low_risk": "Catchy phrases with disclaimers (e.g., 'Invest with confidence, but results may vary')",
+      "no_risk": "Simple, factual slogans (e.g., 'Your trusted investment partner')"
+    }
+}
+
+OutputFormat:
+{
+  "high_risk":[{
+  "risk":"high",
+  "text":"sentence/phrase",
+  "exp":"explain in 1 line why it falls into high risk"
+  }...200 sentence],
+  "medium_risk":[{
+  "risk":"medium",
+  "text":"sentence/phrase",
+  "exp":"explain in 1 line why it falls into medium risk"
+  }...200 sentence],
+  "low_risk":[{
+  "risk":"low",
+  "text":"sentence/phrase",
+  "exp":"explain in 1 line why it falls into low risk"
+  }...200 sentence],
+  "no_risk":[{
+  "risk":"No Risk",
+  "text":"sentence/phrase",
+  "exp":"explain in 1 line why it falls into No risk"
+  }...200 sentence] 
+}
+
+Note:
+  Please make sure you generate diverse sentences and semantically different found in real marketing materials  
+
+I Confirm I need need full 200 diverse examples per category please. Total 800 sentences
