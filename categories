@@ -1,0 +1,954 @@
+{
+  "categories": [
+    {
+      "category": "Branding and Mission Statements",
+      "subcategories": [
+        {
+          "subcategory": "Slogans or Taglines",
+          "risk_levels": {
+            "high_risk": "Slogans implying guaranteed outcomes (e.g., 'Invest with us and never lose money')",
+            "medium_risk": "Taglines that are overly vague or aspirational (e.g., 'The best choice for investors')",
+            "low_risk": "Catchy phrases with disclaimers (e.g., 'Invest with confidence, but results may vary')",
+            "no_risk": "Simple, factual slogans (e.g., 'Your trusted investment partner')"
+          }
+        },
+        {
+          "subcategory": "Company Values or Philosophy",
+          "risk_levels": {
+            "high_risk": "Values implying superiority without evidence (e.g., 'We are the most ethical firm')",
+            "medium_risk": "Philosophy statements that could be misinterpreted (e.g., 'We always put clients first')",
+            "low_risk": "General value statements (e.g., 'Integrity and transparency guide us')",
+            "no_risk": "Factual descriptions of company principles (e.g., 'We adhere to strict ethical standards')"
+          }
+        },
+        {
+          "subcategory": "Vision for the Future",
+          "risk_levels": {
+            "high_risk": "Predictive visions presented as certainties (e.g., 'We will dominate the market')",
+            "medium_risk": "Aspirational visions without context (e.g., 'Leading the future of finance')",
+            "low_risk": "Visions with cautious language (e.g., 'We aim to innovate in sustainable investing')",
+            "no_risk": "General, non-predictive visions (e.g., 'Committed to long-term growth')"
+          }
+        },
+        {
+          "subcategory": "Commitment to Clients",
+          "risk_levels": {
+            "high_risk": "Commitments implying guarantees (e.g., 'We guarantee your satisfaction')",
+            "medium_risk": "Broad commitments without specifics (e.g., 'Your success is our priority')",
+            "low_risk": "Client-focused statements with disclaimers (e.g., 'We strive to meet your needs, but results vary')",
+            "no_risk": "Factual service descriptions (e.g., 'We offer personalized investment advice')"
+          }
+        },
+        {
+          "subcategory": "Industry Leadership Claims",
+          "risk_levels": {
+            "high_risk": "Unsubstantiated leadership claims (e.g., 'The #1 firm in the industry')",
+            "medium_risk": "Leadership claims without full context (e.g., 'A top performer in wealth management')",
+            "low_risk": "Claims with supporting data (e.g., 'Recognized as a leader by XYZ Awards')",
+            "no_risk": "Factual statements of position (e.g., 'One of the largest firms by AUM')"
+          }
+        },
+        {
+          "subcategory": "Heritage or Legacy Statements",
+          "risk_levels": {
+            "high_risk": "Legacy claims implying guaranteed future success (e.g., 'Our history ensures your future')",
+            "medium_risk": "Heritage statements that overemphasize past success (e.g., 'Decades of excellence guarantee results')",
+            "low_risk": "Factual heritage descriptions (e.g., 'Serving clients since 1980')",
+            "no_risk": "Simple historical facts (e.g., 'Founded in 1980')"
+          }
+        },
+        {
+          "subcategory": "Innovation Focus",
+          "risk_levels": {
+            "high_risk": "Innovation claims implying superiority (e.g., 'Our technology guarantees better returns')",
+            "medium_risk": "Vague innovation statements (e.g., 'Cutting-edge solutions for investors')",
+            "low_risk": "Innovation descriptions with context (e.g., 'We invest in new technologies to improve service')",
+            "no_risk": "Factual innovation highlights (e.g., 'Introduced robo-advisory in 2015')"
+          }
+        },
+        {
+          "subcategory": "Community Involvement",
+          "risk_levels": {
+            "high_risk": "Community claims tied to investment outcomes (e.g., 'Invest with us to save the world')",
+            "medium_risk": "Vague community involvement (e.g., 'We give back to the community')",
+            "low_risk": "Specific community initiatives (e.g., 'Sponsored local financial literacy programs')",
+            "no_risk": "Factual descriptions of involvement (e.g., 'Donated $1M to charity in 2023')"
+          }
+        },
+        {
+          "subcategory": "Global Reach Claims",
+          "risk_levels": {
+            "high_risk": "Global claims implying universal suitability (e.g., 'Perfect for investors worldwide')",
+            "medium_risk": "Broad global statements (e.g., 'Serving clients across the globe')",
+            "low_risk": "Global reach with context (e.g., 'Offices in 10 countries')",
+            "no_risk": "Factual international presence (e.g., 'Operating in North America and Europe')"
+          }
+        },
+        {
+          "subcategory": "Client-Centric Mottos",
+          "risk_levels": {
+            "high_risk": "Mottos implying guaranteed satisfaction (e.g., 'We always deliver results')",
+            "medium_risk": "Vague client-centric claims (e.g., 'Your needs come first')",
+            "low_risk": "Mottos with balanced language (e.g., 'Dedicated to serving our clients')",
+            "no_risk": "Simple, factual mottos (e.g., 'Client-focused since day one')"
+          }
+        }
+      ]
+    },
+    {
+      "category": "General Benefits and Aspirational Messaging",
+      "subcategories": [
+        {
+          "subcategory": "Lifestyle Benefits",
+          "risk_levels": {
+            "high_risk": "Specific lifestyle promises (e.g., 'Retire in luxury with our funds')",
+            "medium_risk": "Vague lifestyle benefits (e.g., 'Live your best life')",
+            "low_risk": "Aspirational messages with disclaimers (e.g., 'Plan for the future you want, but investing involves risk')",
+            "no_risk": "General benefit descriptions (e.g., 'Our tools help you plan for retirement')"
+          }
+        },
+        {
+          "subcategory": "Emotional Appeals",
+          "risk_levels": {
+            "high_risk": "Appeals implying emotional security (e.g., 'Never worry about money again')",
+            "medium_risk": "Broad emotional claims (e.g., 'Feel confident about your finances')",
+            "low_risk": "Emotional messaging with context (e.g., 'Our advisors are here to support you')",
+            "no_risk": "Factual service descriptions (e.g., 'We offer financial planning services')"
+          }
+        },
+        {
+          "subcategory": "Broad Performance Claims",
+          "risk_levels": {
+            "high_risk": "Unsubstantiated performance boasts (e.g., 'Maximize your wealth effortlessly')",
+            "medium_risk": "Vague performance benefits (e.g., 'Grow your investments')",
+            "low_risk": "Performance claims with disclaimers (e.g., 'Our strategies aim for growth, but results vary')",
+            "no_risk": "General product purpose (e.g., 'Designed to help manage your portfolio')"
+          }
+        },
+        {
+          "subcategory": "Aspirational Outcomes",
+          "risk_levels": {
+            "high_risk": "Specific outcome promises (e.g., 'Achieve financial freedom in 5 years')",
+            "medium_risk": "Broad aspirational goals (e.g., 'Reach your financial dreams')",
+            "low_risk": "Aspirational messaging with caution (e.g., 'Work toward your goals, but investing carries risk')",
+            "no_risk": "General encouragement (e.g., 'Start planning for your future today')"
+          }
+        },
+        {
+          "subcategory": "Vague Superiority Claims",
+          "risk_levels": {
+            "high_risk": "Unsubstantiated superiority (e.g., 'Better than any other firm')",
+            "medium_risk": "Broad superiority statements (e.g., 'A cut above the rest')",
+            "low_risk": "Superiority claims with context (e.g., 'Our fees are lower than the industry average')",
+            "no_risk": "Factual differentiators (e.g., 'We offer 24/7 customer support')"
+          }
+        },
+        {
+          "subcategory": "Time-Saving Promises",
+          "risk_levels": {
+            "high_risk": "Promises of effortless wealth (e.g., 'Get rich without lifting a finger')",
+            "medium_risk": "Vague time-saving claims (e.g., 'Investing made easy')",
+            "low_risk": "Time-saving features with context (e.g., 'Our app simplifies portfolio tracking')",
+            "no_risk": "Factual efficiency descriptions (e.g., 'Trade in just a few clicks')"
+          }
+        },
+        {
+          "subcategory": "Security Assurances",
+          "risk_levels": {
+            "high_risk": "Implying no risk (e.g., 'Your investments are completely safe')",
+            "medium_risk": "Broad security claims (e.g., 'Protect your financial future')",
+            "low_risk": "Security features with disclaimers (e.g., 'We use encryption, but no investment is risk-free')",
+            "no_risk": "Factual security measures (e.g., 'Two-factor authentication available')"
+          }
+        },
+        {
+          "subcategory": "Empowerment Messaging",
+          "risk_levels": {
+            "high_risk": "Implying total control over outcomes (e.g., 'Take charge and guarantee your success')",
+            "medium_risk": "Broad empowerment claims (e.g., 'Control your financial destiny')",
+            "low_risk": "Empowerment with balanced language (e.g., 'Tools to help you make informed decisions')",
+            "no_risk": "Factual tool descriptions (e.g., 'Access real-time market data')"
+          }
+        },
+        {
+          "subcategory": "Exclusivity Appeals",
+          "risk_levels": {
+            "high_risk": "Implying guaranteed elite status (e.g., 'Join the top 1% of investors')",
+            "medium_risk": "Vague exclusivity claims (e.g., 'Exclusive opportunities await')",
+            "low_risk": "Exclusivity with context (e.g., 'Limited spots for our premium service')",
+            "no_risk": "Factual membership details (e.g., 'Our VIP tier offers additional benefits')"
+          }
+        },
+        {
+          "subcategory": "Simplicity Claims",
+          "risk_levels": {
+            "high_risk": "Implying no effort needed (e.g., 'Investing so simple, anyone can do it')",
+            "medium_risk": "Broad simplicity statements (e.g., 'Easy investing for everyone')",
+            "low_risk": "Simplicity with context (e.g., 'Our platform is user-friendly, but investing requires research')",
+            "no_risk": "Factual ease-of-use descriptions (e.g., 'Intuitive interface for beginners')"
+          }
+        }
+      ]
+    },
+    {
+      "category": "Testimonials and Endorsements",
+      "subcategories": [
+        {
+          "subcategory": "Client Success Stories",
+          "risk_levels": {
+            "high_risk": "Stories implying typical results (e.g., 'This fund doubled my savings')",
+            "medium_risk": "Positive stories without context (e.g., 'I love this product!')",
+            "low_risk": "Stories with disclaimers (e.g., 'I had a good experience, but results may vary')",
+            "no_risk": "Factual testimonials with full disclosures (e.g., 'I appreciated the customer service' with disclaimer)"
+          }
+        },
+        {
+          "subcategory": "Influencer Praise",
+          "risk_levels": {
+            "high_risk": "Influencer claims implying guarantees (e.g., 'This strategy always works')",
+            "medium_risk": "Vague influencer endorsements (e.g., 'Top blogger recommends us')",
+            "low_risk": "Endorsements with context (e.g., 'Influencer X uses our platform')",
+            "no_risk": "Factual mentions (e.g., 'Featured on Influencer X's blog')"
+          }
+        },
+        {
+          "subcategory": "Celebrity Endorsements",
+          "risk_levels": {
+            "high_risk": "Celebrity claims implying typical outcomes (e.g., 'I got rich with this fund')",
+            "medium_risk": "Broad celebrity praise (e.g., 'Trusted by famous investors')",
+            "low_risk": "Endorsements with disclaimers (e.g., 'Celebrity X is a client, but results vary')",
+            "no_risk": "Factual celebrity associations (e.g., 'Celebrity X attended our event')"
+          }
+        },
+        {
+          "subcategory": "Unsolicited Testimonials",
+          "risk_levels": {
+            "high_risk": "Testimonials without disclaimers (e.g., 'Clients love our service!')",
+            "medium_risk": "Vague positive feedback (e.g., 'Great experience!')",
+            "low_risk": "Testimonials with context (e.g., 'Clients appreciate our support, but experiences differ')",
+            "no_risk": "Factual feedback with disclosures (e.g., 'Received positive reviews on Trustpilot')"
+          }
+        },
+        {
+          "subcategory": "Third-Party Quotes",
+          "risk_levels": {
+            "high_risk": "Quotes implying endorsements (e.g., 'As seen in Forbes' implying approval)",
+            "medium_risk": "Vague third-party mentions (e.g., 'Featured in the media')",
+            "low_risk": "Quotes with context (e.g., 'Forbes mentioned our growth strategy')",
+            "no_risk": "Factual media coverage (e.g., 'Profiled in The Wall Street Journal')"
+          }
+        },
+        {
+          "subcategory": "Employee Testimonials",
+          "risk_levels": {
+            "high_risk": "Employees implying product guarantees (e.g., 'Our fund always performs well')",
+            "medium_risk": "Broad employee praise (e.g., 'We believe in our products')",
+            "low_risk": "Employee statements with disclaimers (e.g., 'I think this is a great option, but consult your advisor')",
+            "no_risk": "Factual employee roles (e.g., 'Our team includes CFA charterholders')"
+          }
+        },
+        {
+          "subcategory": "Partner Endorsements",
+          "risk_levels": {
+            "high_risk": "Partners implying product superiority (e.g., 'Our banking partner guarantees success')",
+            "medium_risk": "Vague partner praise (e.g., 'Our partners love working with us')",
+            "low_risk": "Endorsements with context (e.g., 'Partner X collaborates on our ESG fund')",
+            "no_risk": "Factual partnership descriptions (e.g., 'We work with ABC Bank')"
+          }
+        },
+        {
+          "subcategory": "Anonymous Reviews",
+          "risk_levels": {
+            "high_risk": "Anonymous claims without verification (e.g., 'A client said it’s the best!')",
+            "medium_risk": "Vague anonymous feedback (e.g., 'People are raving about us')",
+            "low_risk": "Anonymous reviews with context (e.g., 'Clients on our platform report satisfaction')",
+            "no_risk": "Factual review summaries (e.g., 'Average rating of 4.5 stars on review sites')"
+          }
+        },
+        {
+          "subcategory": "Professional Accolades",
+          "risk_levels": {
+            "high_risk": "Accolades implying guaranteed quality (e.g., 'Award-winning means you’ll succeed')",
+            "medium_risk": "Vague professional praise (e.g., 'Highly rated by advisors')",
+            "low_risk": "Accolades with context (e.g., 'Recognized for innovation by XYZ Association')",
+            "no_risk": "Factual award listings (e.g., 'Won Best Firm in 2023')"
+          }
+        },
+        {
+          "subcategory": "Social Media Mentions",
+          "risk_levels": {
+            "high_risk": "Social media claims implying typical results (e.g., 'Trending for amazing returns')",
+            "medium_risk": "Vague social media buzz (e.g., 'Everyone’s talking about us')",
+            "low_risk": "Mentions with context (e.g., 'Discussed in investment forums')",
+            "no_risk": "Factual social media stats (e.g., 'Over 10,000 followers on Twitter')"
+          }
+        }
+      ]
+    },
+    {
+      "category": "Industry Comparisons and Benchmark Claims",
+      "subcategories": [
+        {
+          "subcategory": "Performance vs. Competitors",
+          "risk_levels": {
+            "high_risk": "Unsubstantiated performance claims (e.g., 'We outperform all competitors')",
+            "medium_risk": "Selective comparisons (e.g., 'Better than peers in 2023')",
+            "low_risk": "Comparisons with data and disclaimers (e.g., 'Outperformed peers in 3 of 5 years')",
+            "no_risk": "Factual performance data (e.g., 'Our fund returned 8% vs. peers’ 7% last year')"
+          }
+        },
+        {
+          "subcategory": "Fee Comparisons",
+          "risk_levels": {
+            "high_risk": "Misleading fee claims (e.g., 'Lowest fees guaranteed')",
+            "medium_risk": "Vague fee advantages (e.g., 'More affordable than others')",
+            "low_risk": "Fee comparisons with context (e.g., 'Our fees are lower than the industry average of 1%')",
+            "no_risk": "Factual fee disclosures (e.g., 'Our management fee is 0.5%')"
+          }
+        },
+        {
+          "subcategory": "Service Quality Claims",
+          "risk_levels": {
+            "high_risk": "Unsubstantiated quality boasts (e.g., 'Best customer service in the industry')",
+            "medium_risk": "Broad service claims (e.g., 'Superior support team')",
+            "low_risk": "Quality claims with evidence (e.g., 'Rated 4.8/5 for customer satisfaction')",
+            "no_risk": "Factual service descriptions (e.g., '24/7 customer support available')"
+          }
+        },
+        {
+          "subcategory": "Innovation Leadership",
+          "risk_levels": {
+            "high_risk": "Innovation claims implying guaranteed success (e.g., 'Our tech ensures better returns')",
+            "medium_risk": "Vague innovation statements (e.g., 'Leading the way in fintech')",
+            "low_risk": "Innovation with context (e.g., 'Introduced AI-driven analytics in 2022')",
+            "no_risk": "Factual innovation highlights (e.g., 'Patented trading algorithm')"
+          }
+        },
+        {
+          "subcategory": "Market Share or Size",
+          "risk_levels": {
+            "high_risk": "Size claims implying quality (e.g., 'Largest firm means best results')",
+            "medium_risk": "Broad size statements (e.g., 'One of the biggest in the industry')",
+            "low_risk": "Size claims with data (e.g., 'Managing $10B in assets')",
+            "no_risk": "Factual market position (e.g., 'Ranked 5th by AUM in 2023')"
+          }
+        },
+        {
+          "subcategory": "Client Satisfaction Scores",
+          "risk_levels": {
+            "high_risk": "Satisfaction claims without evidence (e.g., 'Clients love us')",
+            "medium_risk": "Vague satisfaction statements (e.g., 'High client approval')",
+            "low_risk": "Scores with context (e.g., '90% client retention rate')",
+            "no_risk": "Factual survey results (e.g., '4.7/5 average rating from clients')"
+          }
+        },
+        {
+          "subcategory": "Speed of Service",
+          "risk_levels": {
+            "high_risk": "Speed claims implying better outcomes (e.g., 'Faster trades mean more profits')",
+            "medium_risk": "Broad speed advantages (e.g., 'Quicker than competitors')",
+            "low_risk": "Speed claims with data (e.g., 'Average trade execution in 0.5 seconds')",
+            "no_risk": "Factual service speed (e.g., 'Same-day account setup available')"
+          }
+        },
+        {
+          "subcategory": "Transparency Claims",
+          "risk_levels": {
+            "high_risk": "Unsubstantiated transparency boasts (e.g., 'The most transparent firm')",
+            "medium_risk": "Vague transparency statements (e.g., 'We value openness')",
+            "low_risk": "Transparency with examples (e.g., 'Fee schedules available online')",
+            "no_risk": "Factual transparency practices (e.g., 'Annual reports published publicly')"
+          }
+        },
+        {
+          "subcategory": "Historical Consistency",
+          "risk_levels": {
+            "high_risk": "Consistency claims implying future performance (e.g., 'Always delivering strong returns')",
+            "medium_risk": "Selective consistency data (e.g., 'Consistent growth in bull markets')",
+            "low_risk": "Consistency with full context (e.g., 'Positive returns in 8 of 10 years')",
+            "no_risk": "Factual historical data (e.g., 'Annual returns listed on our website')"
+          }
+        },
+        {
+          "subcategory": "Technology Edge",
+          "risk_levels": {
+            "high_risk": "Tech claims implying guaranteed success (e.g., 'Our AI ensures profits')",
+            "medium_risk": "Vague tech advantages (e.g., 'State-of-the-art platform')",
+            "low_risk": "Tech features with context (e.g., 'AI tools for portfolio analysis')",
+            "no_risk": "Factual tech descriptions (e.g., 'Mobile app with real-time alerts')"
+          }
+        }
+      ]
+    },
+    {
+      "category": "Personal Opinions and Rhetorical Flair",
+      "subcategories": [
+        {
+          "subcategory": "Subjective Quality Claims",
+          "risk_levels": {
+            "high_risk": "Opinions presented as facts (e.g., 'This is the best strategy')",
+            "medium_risk": "Strong subjective claims (e.g., 'Our approach is superior')",
+            "low_risk": "Clearly labeled opinions (e.g., 'In our view, this is a strong option')",
+            "no_risk": "Factual statements without opinions (e.g., 'We offer diversified portfolios')"
+          }
+        },
+        {
+          "subcategory": "Enthusiastic Language",
+          "risk_levels": {
+            "high_risk": "Enthusiasm implying guarantees (e.g., 'An unbeatable opportunity!')",
+            "medium_risk": "Overly positive language (e.g., 'Amazing potential for growth')",
+            "low_risk": "Enthusiasm with disclaimers (e.g., 'Exciting possibilities, but risks remain')",
+            "no_risk": "Neutral descriptions (e.g., 'We are committed to innovation')"
+          }
+        },
+        {
+          "subcategory": "Personal Beliefs",
+          "risk_levels": {
+            "high_risk": "Beliefs presented as certainties (e.g., 'We believe this will double your money')",
+            "medium_risk": "Broad belief statements (e.g., 'We think this is a game-changer')",
+            "low_risk": "Clearly subjective beliefs (e.g., 'Our team believes in sustainable investing')",
+            "no_risk": "Factual company values (e.g., 'We prioritize client satisfaction')"
+          }
+        },
+        {
+          "subcategory": "Hyperbolic Statements",
+          "risk_levels": {
+            "high_risk": "Exaggerated claims (e.g., 'Revolutionizing the industry overnight')",
+            "medium_risk": "Dramatic language (e.g., 'A quantum leap in investing')",
+            "low_risk": "Hyperbole with context (e.g., 'Our new tool is a significant improvement')",
+            "no_risk": "Factual descriptions (e.g., 'We have updated our platform')"
+          }
+        },
+        {
+          "subcategory": "Anecdotal Evidence",
+          "risk_levels": {
+            "high_risk": "Anecdotes implying typical results (e.g., 'I’ve seen it work wonders')",
+            "medium_risk": "Vague personal stories (e.g., 'Many clients have succeeded')",
+            "low_risk": "Anecdotes with disclaimers (e.g., 'One client’s experience, not representative')",
+            "no_risk": "Factual case studies (e.g., 'Client X achieved Y, see full case study')"
+          }
+        },
+        {
+          "subcategory": "Bold Predictions",
+          "risk_levels": {
+            "high_risk": "Definitive predictions (e.g., 'This stock will double next year')",
+            "medium_risk": "Speculative forecasts (e.g., 'Likely to outperform')",
+            "low_risk": "Predictions with caution (e.g., 'Potential for growth, but uncertain')",
+            "no_risk": "Factual market data (e.g., 'Historical average returns are 7%')"
+          }
+        },
+        {
+          "subcategory": "Dramatic Comparisons",
+          "risk_levels": {
+            "high_risk": "Unsubstantiated comparisons (e.g., 'Light years ahead of competitors')",
+            "medium_risk": "Exaggerated differences (e.g., 'Miles better than the rest')",
+            "low_risk": "Comparisons with evidence (e.g., 'Our fees are 0.5% vs. industry 1%')",
+            "no_risk": "Factual differentiators (e.g., 'We offer ESG-focused funds')"
+          }
+        },
+        {
+          "subcategory": "Confidence Assertions",
+          "risk_levels": {
+            "high_risk": "Assertions implying certainty (e.g., 'We’re certain you’ll succeed')",
+            "medium_risk": "Strong confidence statements (e.g., 'Highly likely to perform well')",
+            "low_risk": "Confidence with caveats (e.g., 'We’re optimistic, but markets are unpredictable')",
+            "no_risk": "Factual statements (e.g., 'We have a proven track record')"
+          }
+        },
+        {
+          "subcategory": "Playful Rhetoric",
+          "risk_levels": {
+            "high_risk": "Rhetoric implying triviality (e.g., 'Investing is just a game')",
+            "medium_risk": "Lighthearted but vague claims (e.g., 'Fun and profitable!')",
+            "low_risk": "Playful language with context (e.g., 'Enjoyable platform, serious investing')",
+            "no_risk": "Factual descriptions (e.g., 'User-friendly interface')"
+          }
+        },
+        {
+          "subcategory": "Visionary Claims",
+          "risk_levels": {
+            "high_risk": "Visionary statements implying guarantees (e.g., 'This is the future, and it’s certain')",
+            "medium_risk": "Broad visionary language (e.g., 'Leading the next financial revolution')",
+            "low_risk": "Vision with balanced language (e.g., 'We aim to innovate in finance')",
+            "no_risk": "Factual innovation goals (e.g., 'Developing new investment tools')"
+          }
+        }
+      ]
+    },
+    {
+      "category": "Historical and Factual Statements",
+      "subcategories": [
+        {
+          "subcategory": "Company Milestones",
+          "risk_levels": {
+            "high_risk": "Milestones implying future success (e.g., 'Our history guarantees future performance')",
+            "medium_risk": "Selective milestone highlights (e.g., 'Celebrating only our best years')",
+            "low_risk": "Milestones with context (e.g., 'Founded in 1990, with ups and downs')",
+            "no_risk": "Factual milestone dates (e.g., 'Established in 1990')"
+          }
+        },
+        {
+          "subcategory": "Market Performance Data",
+          "risk_levels": {
+            "high_risk": "Data implying future trends (e.g., 'Past returns predict future gains')",
+            "medium_risk": "Selective data presentation (e.g., 'The market returned 10% last year')",
+            "low_risk": "Data with disclaimers (e.g., 'Past performance is not indicative of future results')",
+            "no_risk": "Complete, factual data (e.g., 'Historical market returns available upon request')"
+          }
+        },
+        {
+          "subcategory": "Product Launch Dates",
+          "risk_levels": {
+            "high_risk": "Launch dates tied to performance claims (e.g., 'Since launch, we’ve always outperformed')",
+            "medium_risk": "Vague launch statements (e.g., 'Our fund has a strong history')",
+            "low_risk": "Launch dates with context (e.g., 'Launched in 2015, performance varies')",
+            "no_risk": "Factual launch dates (e.g., 'Our fund started on January 1, 2015')"
+          }
+        },
+        {
+          "subcategory": "Regulatory Approvals",
+          "risk_levels": {
+            "high_risk": "Approvals implying product quality (e.g., 'SEC-approved means it’s safe')",
+            "medium_risk": "Broad approval statements (e.g., 'Fully compliant with regulations')",
+            "low_risk": "Approvals with context (e.g., 'Registered with the SEC, but not a guarantee')",
+            "no_risk": "Factual regulatory status (e.g., 'SEC-registered investment advisor')"
+          }
+        },
+        {
+          "subcategory": "Client Base Statistics",
+          "risk_levels": {
+            "high_risk": "Statistics implying typical client success (e.g., 'Our clients always prosper')",
+            "medium_risk": "Vague client numbers (e.g., 'Serving millions of happy clients')",
+            "low_risk": "Statistics with context (e.g., 'Over 1 million clients, experiences vary')",
+            "no_risk": "Factual client data (e.g., 'Currently managing accounts for 1,250,000 clients')"
+          }
+        },
+        {
+          "subcategory": "Asset Growth Figures",
+          "risk_levels": {
+            "high_risk": "Growth figures implying future trends (e.g., 'Our AUM growth guarantees success')",
+            "medium_risk": "Selective growth data (e.g., 'AUM doubled in the last year')",
+            "low_risk": "Growth figures with context (e.g., 'AUM grew 20% in 2023, past performance varies')",
+            "no_risk": "Factual AUM data (e.g., 'AUM as of 2023: $10 billion')"
+          }
+        },
+        {
+          "subcategory": "Award History",
+          "risk_levels": {
+            "high_risk": "Awards implying guaranteed quality (e.g., 'Award-winning means you’ll win too')",
+            "medium_risk": "Vague award mentions (e.g., 'Recognized for excellence')",
+            "low_risk": "Awards with context (e.g., 'Won Best Firm in 2023 for customer service')",
+            "no_risk": "Factual award listings (e.g., 'Received XYZ Award in 2023')"
+          }
+        },
+        {
+          "subcategory": "Team Expertise",
+          "risk_levels": {
+            "high_risk": "Expertise claims implying infallibility (e.g., 'Our experts never make mistakes')",
+            "medium_risk": "Broad expertise statements (e.g., 'Highly qualified team')",
+            "low_risk": "Expertise with specifics (e.g., 'Team includes 10 CFA charterholders')",
+            "no_risk": "Factual qualifications (e.g., 'All advisors are Series 7 licensed')"
+          }
+        },
+        {
+          "subcategory": "Office Locations",
+          "risk_levels": {
+            "high_risk": "Location claims implying better service (e.g., 'Global offices mean better returns')",
+            "medium_risk": "Vague location statements (e.g., 'Worldwide presence')",
+            "low_risk": "Locations with context (e.g., 'Offices in major financial hubs')",
+            "no_risk": "Factual office addresses (e.g., 'Headquartered in New York with branches in London and Tokyo')"
+          }
+        },
+        {
+          "subcategory": "Partnership Timeline",
+          "risk_levels": {
+            "high_risk": "Partnerships implying product quality (e.g., 'Our partners guarantee success')",
+            "medium_risk": "Broad partnership statements (e.g., 'Long-standing collaborations')",
+            "low_risk": "Partnerships with context (e.g., 'Partnered with ABC since 2010 for research')",
+            "no_risk": "Factual partnership details (e.g., 'Entered into agreement with XYZ in 2015')"
+          }
+        }
+      ]
+    },
+    {
+      "category": "Customer Invitations and Action Statements",
+      "subcategories": [
+        {
+          "subcategory": "Event Invitations",
+          "risk_levels": {
+            "high_risk": "Invitations implying exclusive benefits (e.g., 'Attend to unlock secret strategies')",
+            "medium_risk": "Vague event promises (e.g., 'Learn how to get rich')",
+            "low_risk": "Invitations with clear agendas (e.g., 'Join our webinar on market trends')",
+            "no_risk": "Factual event details (e.g., 'Register for our free seminar on investing')"
+          }
+        },
+        {
+          "subcategory": "Trial Offers",
+          "risk_levels": {
+            "high_risk": "Trials implying guaranteed satisfaction (e.g., 'Try it and see instant results')",
+            "medium_risk": "Broad trial benefits (e.g., 'Experience the difference')",
+            "low_risk": "Trials with clear terms (e.g., '30-day free trial, cancel anytime')",
+            "no_risk": "Factual trial descriptions (e.g., 'Sign up for a free demo')"
+          }
+        },
+        {
+          "subcategory": "Limited-Time Promotions",
+          "risk_levels": {
+            "high_risk": "Promotions creating undue pressure (e.g., 'Act now or miss out forever')",
+            "medium_risk": "Vague promotion benefits (e.g., 'Special offer for a limited time')",
+            "low_risk": "Promotions with clear terms (e.g., '10% discount until December 31')",
+            "no_risk": "Factual promotion details (e.g., 'New clients get $50 bonus')"
+          }
+        },
+        {
+          "subcategory": "Engagement Calls",
+          "risk_levels": {
+            "high_risk": "Calls implying exclusive insights (e.g., 'Follow us for insider tips')",
+            "medium_risk": "Broad engagement benefits (e.g., 'Stay informed with our updates')",
+            "low_risk": "Engagement with context (e.g., 'Follow for daily market news')",
+            "no_risk": "Factual engagement requests (e.g., 'Like our page for company updates')"
+          }
+        },
+        {
+          "subcategory": "Product Demos",
+          "risk_levels": {
+            "high_risk": "Demos implying product guarantees (e.g., 'See how our tool ensures profits')",
+            "medium_risk": "Vague demo benefits (e.g., 'Discover the power of our platform')",
+            "low_risk": "Demos with clear objectives (e.g., 'Learn how to use our trading tools')",
+            "no_risk": "Factual demo descriptions (e.g., 'Schedule a live demo of our software')"
+          }
+        },
+        {
+          "subcategory": "Consultation Offers",
+          "risk_levels": {
+            "high_risk": "Consultations implying guaranteed advice (e.g., 'Get advice that always works')",
+            "medium_risk": "Broad consultation benefits (e.g., 'Talk to an expert for better investing')",
+            "low_risk": "Consultations with context (e.g., 'Discuss your goals with an advisor')",
+            "no_risk": "Factual consultation details (e.g., 'Book a free 30-minute session')"
+          }
+        },
+        {
+          "subcategory": "Survey Requests",
+          "risk_levels": {
+            "high_risk": "Surveys implying influence on outcomes (e.g., 'Tell us how to make you rich')",
+            "medium_risk": "Vague survey purposes (e.g., 'Help us improve your experience')",
+            "low_risk": "Surveys with clear goals (e.g., 'Share your feedback on our services')",
+            "no_risk": "Factual survey invitations (e.g., 'Complete our customer satisfaction survey')"
+          }
+        },
+        {
+          "subcategory": "Newsletter Sign-Ups",
+          "risk_levels": {
+            "high_risk": "Newsletters implying exclusive insights (e.g., 'Subscribe for market-beating tips')",
+            "medium_risk": "Broad newsletter benefits (e.g., 'Get the latest financial news')",
+            "low_risk": "Newsletters with context (e.g., 'Weekly market updates and analysis')",
+            "no_risk": "Factual newsletter descriptions (e.g., 'Sign up for our monthly newsletter')"
+          }
+        },
+        {
+          "subcategory": "App Downloads",
+          "risk_levels": {
+            "high_risk": "App claims implying better outcomes (e.g., 'Download to start winning')",
+            "medium_risk": "Vague app benefits (e.g., 'Manage your investments easily')",
+            "low_risk": "App features with context (e.g., 'Track your portfolio on the go')",
+            "no_risk": "Factual app descriptions (e.g., 'Available on iOS and Android')"
+          }
+        },
+        {
+          "subcategory": "Feedback Prompts",
+          "risk_levels": {
+            "high_risk": "Feedback requests implying influence (e.g., 'Tell us how to guarantee your success')",
+            "medium_risk": "Broad feedback requests (e.g., 'Help us serve you better')",
+            "low_risk": "Feedback with clear purpose (e.g., 'Rate your recent experience')",
+            "no_risk": "Factual feedback mechanisms (e.g., 'Submit your suggestions here')"
+          }
+        }
+      ]
+    },
+    {
+      "category": "Legal and Regulatory Disclosures",
+      "subcategories": [
+        {
+          "subcategory": "Risk Warnings",
+          "risk_levels": {
+            "high_risk": "Incomplete or missing warnings (e.g., omitting key risks)",
+            "medium_risk": "Vague risk statements (e.g., 'Investing has risks')",
+            "low_risk": "Mostly complete warnings (e.g., 'Investing involves market risk')",
+            "no_risk": "Comprehensive risk disclosures (e.g., 'See full risk disclosure in prospectus')"
+          }
+        },
+        {
+          "subcategory": "Fee Disclosures",
+          "risk_levels": {
+            "high_risk": "Hidden or omitted fees (e.g., not mentioning commissions)",
+            "medium_risk": "Unclear fee descriptions (e.g., 'Fees may apply')",
+            "low_risk": "Mostly clear fee disclosures (e.g., 'Management fee: 1% annually')",
+            "no_risk": "Complete, transparent fee schedules (e.g., 'All fees listed in our fee table')"
+          }
+        },
+        {
+          "subcategory": "Conflict of Interest Notices",
+          "risk_levels": {
+            "high_risk": "Missing conflict disclosures (e.g., not disclosing commissions)",
+            "medium_risk": "Vague conflict statements (e.g., 'We may have interests')",
+            "low_risk": "Mostly clear notices (e.g., 'We earn fees from recommended products')",
+            "no_risk": "Full, transparent conflict disclosures (e.g., 'See our conflict policy for details')"
+          }
+        },
+        {
+          "subcategory": "Regulatory Compliance",
+          "risk_levels": {
+            "high_risk": "False compliance claims (e.g., 'Fully compliant' when not)",
+            "medium_risk": "Vague compliance statements (e.g., 'We follow industry standards')",
+            "low_risk": "Compliance with context (e.g., 'Registered with FINRA and SIPC')",
+            "no_risk": "Factual regulatory status (e.g., 'Member FINRA/SIPC')"
+          }
+        },
+        {
+          "subcategory": "Terms and Conditions",
+          "risk_levels": {
+            "high_risk": "Missing or incomplete terms (e.g., omitting key conditions)",
+            "medium_risk": "Unclear terms (e.g., 'Subject to change')",
+            "low_risk": "Mostly clear terms (e.g., 'See full terms on our website')",
+            "no_risk": "Complete, accessible terms (e.g., 'Full terms and conditions apply')"
+          }
+        },
+        {
+          "subcategory": "Past Performance Caveats",
+          "risk_levels": {
+            "high_risk": "Omitting performance disclaimers (e.g., presenting past returns as future guarantees)",
+            "medium_risk": "Vague caveats (e.g., 'Results may vary')",
+            "low_risk": "Standard disclaimers (e.g., 'Past performance does not guarantee future results')",
+            "no_risk": "Comprehensive performance disclosures (e.g., 'See full performance history and risks')"
+          }
+        },
+        {
+          "subcategory": "Tax Disclaimer",
+          "risk_levels": {
+            "high_risk": "Missing tax advice disclaimers (e.g., implying tax benefits without caution)",
+            "medium_risk": "Vague tax statements (e.g., 'Tax advantages may apply')",
+            "low_risk": "General tax disclaimers (e.g., 'Consult a tax advisor')",
+            "no_risk": "Clear, specific tax disclosures (e.g., 'Tax implications vary; see details')"
+          }
+        },
+        {
+          "subcategory": "Jurisdictional Limits",
+          "risk_levels": {
+            "high_risk": "Omitting availability restrictions (e.g., offering products where not licensed)",
+            "medium_risk": "Vague jurisdiction statements (e.g., 'Available in select areas')",
+            "low_risk": "Mostly clear limits (e.g., 'Not available in all states')",
+            "no_risk": "Factual availability details (e.g., 'Licensed in NY, CA, and TX')"
+          }
+        },
+        {
+          "subcategory": "Privacy Notices",
+          "risk_levels": {
+            "high_risk": "Missing privacy policies (e.g., not disclosing data use)",
+            "medium_risk": "Vague privacy statements (e.g., 'We respect your privacy')",
+            "low_risk": "Mostly clear notices (e.g., 'See our privacy policy for details')",
+            "no_risk": "Comprehensive privacy disclosures (e.g., 'Your data is protected under GDPR')"
+          }
+        },
+        {
+          "subcategory": "Hypothetical Performance Notes",
+          "risk_levels": {
+            "high_risk": "Presenting hypothetical results as real (e.g., 'You would have made 20%')",
+            "medium_risk": "Unclear hypothetical disclosures (e.g., 'Based on models')",
+            "low_risk": "Standard hypothetical disclaimers (e.g., 'Hypothetical results, not actual')",
+            "no_risk": "Fully disclosed hypothetical data (e.g., 'See methodology for simulated returns')"
+          }
+        }
+      ]
+    },
+    {
+      "category": "Educational Content and Tutorials",
+      "subcategories": [
+        {
+          "subcategory": "Investment Basics",
+          "risk_levels": {
+            "high_risk": "Basics implying specific outcomes (e.g., 'Follow these steps to get rich')",
+            "medium_risk": "Vague educational claims (e.g., 'Learn to invest successfully')",
+            "low_risk": "Educational content with disclaimers (e.g., 'This is for informational purposes only')",
+            "no_risk": "Factual, neutral basics (e.g., 'What is a stock?')"
+          }
+        },
+        {
+          "subcategory": "Market Concepts",
+          "risk_levels": {
+            "high_risk": "Concepts tied to predictions (e.g., 'Understanding this will make you money')",
+            "medium_risk": "Broad concept explanations (e.g., 'Master the markets')",
+            "low_risk": "Concepts with context (e.g., 'Diversification can reduce risk')",
+            "no_risk": "Factual concept definitions (e.g., 'Diversification means spreading investments')"
+          }
+        },
+        {
+          "subcategory": "Product Guides",
+          "risk_levels": {
+            "high_risk": "Guides implying product guarantees (e.g., 'Use our tool to ensure profits')",
+            "medium_risk": "Vague product benefits (e.g., 'Get the most out of our platform')",
+            "low_risk": "Guides with clear instructions (e.g., 'How to set up your account')",
+            "no_risk": "Factual feature descriptions (e.g., 'Our platform offers real-time quotes')"
+          }
+        },
+        {
+          "subcategory": "Financial Planning Tips",
+          "risk_levels": {
+            "high_risk": "Tips implying certainty (e.g., 'Follow this plan to retire rich')",
+            "medium_risk": "Broad planning advice (e.g., 'Smart ways to save')",
+            "low_risk": "Tips with disclaimers (e.g., 'Consider these strategies, but consult an advisor')",
+            "no_risk": "Factual planning information (e.g., 'Budgeting involves tracking income and expenses')"
+          }
+        },
+        {
+          "subcategory": "Risk Management Strategies",
+          "risk_levels": {
+            "high_risk": "Strategies implying no risk (e.g., 'Eliminate risk with this method')",
+            "medium_risk": "Vague risk management claims (e.g., 'Protect your investments')",
+            "low_risk": "Strategies with context (e.g., 'Hedging can reduce but not eliminate risk')",
+            "no_risk": "Factual strategy explanations (e.g., 'Stop-loss orders limit potential losses')"
+          }
+        },
+        {
+          "subcategory": "Tax Basics",
+          "risk_levels": {
+            "high_risk": "Tax advice without disclaimers (e.g., 'This investment is tax-free')",
+            "medium_risk": "Broad tax information (e.g., 'Understanding tax benefits')",
+            "low_risk": "Tax basics with disclaimers (e.g., 'Tax laws vary; consult a professional')",
+            "no_risk": "Factual tax definitions (e.g., 'Capital gains are profits from asset sales')"
+          }
+        },
+        {
+          "subcategory": "Retirement 101",
+          "risk_levels": {
+            "high_risk": "Retirement advice implying guarantees (e.g., 'Secure your retirement with this plan')",
+            "medium_risk": "Vague retirement tips (e.g., 'Prepare for a comfortable retirement')",
+            "low_risk": "Retirement information with context (e.g., '401(k)s offer tax advantages')",
+            "no_risk": "Factual retirement account descriptions (e.g., 'IRAs allow tax-deferred growth')"
+          }
+        },
+        {
+          "subcategory": "Stock Market Overviews",
+          "risk_levels": {
+            "high_risk": "Overviews implying market predictability (e.g., 'Learn to time the market')",
+            "medium_risk": "Broad market explanations (e.g., 'Understanding market movements')",
+            "low_risk": "Overviews with disclaimers (e.g., 'Markets are unpredictable')",
+            "no_risk": "Factual market structures (e.g., 'The NYSE is a major stock exchange')"
+          }
+        },
+        {
+          "subcategory": "Debt Management Lessons",
+          "risk_levels": {
+            "high_risk": "Debt advice implying easy solutions (e.g., 'Eliminate debt overnight')",
+            "medium_risk": "Vague debt tips (e.g., 'Manage your debt effectively')",
+            "low_risk": "Lessons with context (e.g., 'Paying off high-interest debt first can save money')",
+            "no_risk": "Factual debt concepts (e.g., 'Interest rates affect loan costs')"
+          }
+        },
+        {
+          "subcategory": "Behavioral Finance Topics",
+          "risk_levels": {
+            "high_risk": "Topics implying behavioral control (e.g., 'Avoid all emotional mistakes')",
+            "medium_risk": "Broad behavioral insights (e.g., 'Understand investor psychology')",
+            "low_risk": "Topics with examples (e.g., 'Loss aversion can lead to poor decisions')",
+            "no_risk": "Factual behavioral definitions (e.g., 'Herding is following the crowd')"
+          }
+        }
+      ]
+    },
+    {
+      "category": "Promotional Offers and Incentives",
+      "subcategories": [
+        {
+          "subcategory": "Discounts on Fees",
+          "risk_levels": {
+            "high_risk": "Discounts implying zero cost (e.g., 'No fees ever')",
+            "medium_risk": "Vague discount terms (e.g., 'Special pricing for new clients')",
+            "low_risk": "Discounts with clear terms (e.g., '0.5% fee for the first year')",
+            "no_risk": "Factual discount details (e.g., 'Waived account setup fee')"
+          }
+        },
+        {
+          "subcategory": "Bonus Rewards",
+          "risk_levels": {
+            "high_risk": "Bonuses implying guaranteed benefits (e.g., 'Get $100 and start winning')",
+            "medium_risk": "Broad bonus claims (e.g., 'Earn rewards for investing')",
+            "low_risk": "Bonuses with terms (e.g., 'Receive $50 when you deposit $1,000')",
+            "no_risk": "Factual bonus descriptions (e.g., 'New clients get a $50 credit')"
+          }
+        },
+        {
+          "subcategory": "Referral Programs",
+          "risk_levels": {
+            "high_risk": "Referrals implying easy money (e.g., 'Refer friends and get rich')",
+            "medium_risk": "Vague referral benefits (e.g., 'Earn rewards for referrals')",
+            "low_risk": "Referrals with clear terms (e.g., 'Get $25 per referral, up to 5')",
+            "no_risk": "Factual referral details (e.g., 'Refer a friend and both get $25')"
+          }
+        },
+        {
+          "subcategory": "Limited-Time Offers",
+          "risk_levels": {
+            "high_risk": "Offers creating undue urgency (e.g., 'Invest now or miss out forever')",
+            "medium_risk": "Broad limited-time claims (e.g., 'Special deal for a short time')",
+            "low_risk": "Offers with clear deadlines (e.g., '0% commission until December 31')",
+            "no_risk": "Factual offer details (e.g., 'Promotion ends on January 1')"
+          }
+        },
+        {
+          "subcategory": "Loyalty Rewards",
+          "risk_levels": {
+            "high_risk": "Rewards implying preferential treatment (e.g., 'Loyal clients always win')",
+            "medium_risk": "Vague loyalty benefits (e.g., 'Exclusive perks for long-term clients')",
+            "low_risk": "Rewards with context (e.g., 'Earn points for each year with us')",
+            "no_risk": "Factual loyalty program details (e.g., 'Tiered benefits based on account size')"
+          }
+        },
+        {
+          "subcategory": "Cashback Deals",
+          "risk_levels": {
+            "high_risk": "Cashback implying no cost (e.g., 'Invest for free with cashback')",
+            "medium_risk": "Broad cashback claims (e.g., 'Get money back on trades')",
+            "low_risk": "Cashback with terms (e.g., '1% cashback on first $1,000 invested')",
+            "no_risk": "Factual cashback details (e.g., 'Cashback credited monthly')"
+          }
+        },
+        {
+          "subcategory": "Free Tools Access",
+          "risk_levels": {
+            "high_risk": "Tools implying guaranteed success (e.g., 'Use our tools to ensure profits')",
+            "medium_risk": "Vague tool benefits (e.g., 'Unlock premium features')",
+            "low_risk": "Tools with clear descriptions (e.g., 'Free access to analytics dashboard')",
+            "no_risk": "Factual tool offerings (e.g., 'Includes portfolio tracker and alerts')"
+          }
+        },
+        {
+          "subcategory": "Tiered Incentives",
+          "risk_levels": {
+            "high_risk": "Incentives implying better outcomes (e.g., 'Higher tiers mean more profits')",
+            "medium_risk": "Broad tier benefits (e.g., 'Upgrade for more rewards')",
+            "low_risk": "Tiers with clear differences (e.g., 'Gold tier offers lower fees')",
+            "no_risk": "Factual tier details (e.g., 'Silver, Gold, and Platinum levels available')"
+          }
+        },
+        {
+          "subcategory": "Holiday Promotions",
+          "risk_levels": {
+            "high_risk": "Promotions implying seasonal guarantees (e.g., 'Invest this holiday for sure gains')",
+            "medium_risk": "Vague holiday offers (e.g., 'Special holiday bonus')",
+            "low_risk": "Promotions with terms (e.g., 'Double rewards in December')",
+            "no_risk": "Factual holiday deals (e.g., 'Holiday discount on advisory services')"
+          }
+        },
+        {
+          "subcategory": "Milestone Bonuses",
+          "risk_levels": {
+            "high_risk": "Bonuses implying easy wealth (e.g., 'Hit $10,000 and get rich')",
+            "medium_risk": "Broad milestone claims (e.g., 'Rewards for reaching goals')",
+            "low_risk": "Bonuses with clear criteria (e.g., '$50 when your account reaches $10,000')",
+            "no_risk": "Factual bonus details (e.g., 'Milestone rewards program available')"
+          }
+        }
+      ]
+    }
+  ]
+}
